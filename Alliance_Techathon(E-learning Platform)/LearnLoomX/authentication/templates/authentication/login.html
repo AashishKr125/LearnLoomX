@@ -1,0 +1,33 @@
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnLoomX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">LearnLoomX</div>
+            <nav>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'community' %}">Community</a></li>
+                <a href="{% url 'learn_with_ai' %}">LearnWithAI</a>
+                <li><a href="{% url 'learn' %}">Learn</a></li>
+            </nav>
+            <div class="header-message">
+                <span>Welcome, {{ user.username }}!</span>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <p>© 2025 LearnLoomX Platform. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> by TechTitans</p>
+    </footer>
+</body>
+</html>
